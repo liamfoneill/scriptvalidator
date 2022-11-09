@@ -22,7 +22,7 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   }
 }
 
-resource stg 'Microsoft.Logic/workflows@2019-05-01' = {
+resource logicapp 'Microsoft.Logic/workflows@2019-05-01' = {
   name: logicAppName
   location: location
   tags: {
@@ -110,6 +110,10 @@ resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
   }
   properties: {
     serverFarmId: appServicePlan.id
+    siteConfig: {
+      linuxFxVersion: 'DOTNETCORE|6.0'
+    }
+
   }
 }
 
