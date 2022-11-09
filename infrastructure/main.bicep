@@ -177,4 +177,17 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2022-10
   }
 }
 
+resource appInsightsComponents 'Microsoft.Insights/components@2020-02-02' = {
+  name: 'examValidatorInsights'
+  location: location
+  kind: ''
+  properties: {
+    Application_Type: 'web'
+    Flow_Type: 'Redfield'
+    Request_Source: 'IbizaAIExtension'
+    WorkspaceResourceId: logAnalyticsWorkspace.id
+  }
+}
+
+
 
