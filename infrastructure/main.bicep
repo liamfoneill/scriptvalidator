@@ -180,7 +180,7 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2022-10
 resource appInsightsComponents 'Microsoft.Insights/components@2020-02-02' = {
   name: 'examValidatorInsights'
   location: location
-  kind: ''
+  kind: 'web'
   properties: {
     Application_Type: 'web'
     Flow_Type: 'Redfield'
