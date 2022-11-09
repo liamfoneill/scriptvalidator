@@ -1,6 +1,4 @@
-on:
-  push:
-    branches: [ $default-branch ]
+on: [push]
 name: Azure ARM
 jobs:
   build-and-deploy:
