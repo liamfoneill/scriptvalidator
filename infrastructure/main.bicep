@@ -167,3 +167,14 @@ resource signalR 'Microsoft.SignalRService/signalR@2022-08-01-preview' = {
   }
 }
 
+resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
+  name: 'examScriptsLogs'
+  location: location
+  properties: {
+    sku: {
+      name: 'PerGB2018'
+    }
+  }
+}
+
+
