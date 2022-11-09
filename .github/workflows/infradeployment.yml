@@ -1,4 +1,6 @@
-on: [push]
+on:
+  push:
+    branches: [ $default-branch ]
 name: Azure ARM
 jobs:
   build-and-deploy:
@@ -22,3 +24,5 @@ jobs:
         template: ./infrastructure/main.bicep
         parameters: ''
         failOnStdErr: false
+
+
