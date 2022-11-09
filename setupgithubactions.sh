@@ -1,0 +1,1 @@
+az ad sp create-for-rbac --name exampleValidatorDeployer --role contributor --scopes /subscriptions/afe07a9d-e6de-4b4c-91eb-3ae7265a9245/resourceGroups/validator-demo --sdk-auth
